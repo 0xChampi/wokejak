@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npx next dev)",
+      "Bash(PATH=\"$HOME/.nvm/versions/node/v20.7.0/bin:$PATH\" npm run dev:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

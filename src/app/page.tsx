@@ -2,6 +2,12 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
+const floatingImages = [
+  "/woj1.png", "/woj2.png", "/bull.png", "/pete.png",
+  "/casino.png", "/jak.png", "/polaroid.png",
+  "/woj1.png", "/woj2.png", "/bull.png",
+];
+
 export default function WokejakWebsite() {
   const [copied, setCopied] = useState(false);
   const [cancelled, setCancelled] = useState(69420);
@@ -9,12 +15,6 @@ export default function WokejakWebsite() {
   const [randomPositions, setRandomPositions] = useState<Array<{top: number, left: number, rotation: number, scale: number}>>([]);
 
   const contractAddress = "woke...JakSolana420";
-
-  const floatingImages = [
-    "/woj1.png", "/woj2.png", "/bull.png", "/pete.png",
-    "/casino.png", "/jak.png", "/polaroid.png",
-    "/woj1.png", "/woj2.png", "/bull.png",
-  ];
 
   useEffect(() => {
     // Generate random positions for floating images
@@ -41,10 +41,6 @@ export default function WokejakWebsite() {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const randomColor = () => {
-    const colors = ['#ff0000', '#ff00ff', '#00ff00', '#ffff00', '#00ffff', '#ff6600', '#ff0066', '#6600ff', '#00ff66'];
-    return colors[Math.floor(Math.random() * colors.length)];
-  };
 
   return (
     <div className="min-h-screen text-white overflow-x-hidden cursor-crosshair" style={{background: 'linear-gradient(45deg, #000, #1a0a2e, #0a1a0a, #2e0a1a, #000)'}}>
@@ -211,7 +207,7 @@ export default function WokejakWebsite() {
               />
               {/* Speech bubble */}
               <div className="absolute -top-2 -right-2 bg-white text-black p-3 rounded-2xl border-2 border-black max-w-[160px]">
-                <div className="font-bold comic-sans text-sm">"im literally shaking rn"</div>
+                <div className="font-bold comic-sans text-sm">&quot;im literally shaking rn&quot;</div>
                 <div className="absolute -bottom-2 left-6 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-white"></div>
               </div>
             </div>
@@ -287,7 +283,7 @@ export default function WokejakWebsite() {
               { src: "/pete.png", caption: "diamond hands activated" },
               { src: "/casino.png", caption: "its free money" },
               { src: "/thejews.png", caption: "who dumped" },
-              { src: "/bull.png", caption: "we're so back" },
+              { src: "/bull.png", caption: "we are so back" },
             ].map((meme, idx) => (
               <div key={idx} className="group hover:scale-105 transition-all">
                 <div className="rounded-xl overflow-hidden border border-white/10 bg-black">
@@ -337,8 +333,8 @@ export default function WokejakWebsite() {
       {/* Bottom marquee */}
       <div className="bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 py-2 overflow-hidden">
         <div className="marquee whitespace-nowrap text-lg font-bold text-white flex">
-          <span className="mr-8">🚀 WE'RE STILL EARLY 📈 1000X POTENTIAL 💎 DIAMOND HANDS 🙌 WAGMI 🔥 LFG 🦍 </span>
-          <span className="mr-8">🚀 WE'RE STILL EARLY 📈 1000X POTENTIAL 💎 DIAMOND HANDS 🙌 WAGMI 🔥 LFG 🦍 </span>
+          <span className="mr-8">🚀 STILL EARLY 📈 1000X POTENTIAL 💎 DIAMOND HANDS 🙌 WAGMI 🔥 LFG 🦍 </span>
+          <span className="mr-8">🚀 STILL EARLY 📈 1000X POTENTIAL 💎 DIAMOND HANDS 🙌 WAGMI 🔥 LFG 🦍 </span>
         </div>
       </div>
 
